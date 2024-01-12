@@ -1,0 +1,16 @@
+#!/bin/bash
+# script para compilar linkando con la libreria web y gsl
+# Metodo para llamar:
+# my_make ejecutable (sin -lgsl -lgslcblas)
+# Ojo: para que funcione blas, basta con poner -lcblas -lblas -lg2c 
+# justo antes de las librerias matematicas
+# Para linkar con UMFPACK, ademas antes de blas hay que annadir
+# -lumfpack -lamd
+# Para linkar con la GotoBLAS, poner -lgoto -lpthread en lugar de
+# -lcblas -lblas -lg2c
+
+exe=$1
+echo "compilando $exe..."
+gcc -fno-math-errno -static -g $exe.c -o $exe -I../include\
+	-L../lib -lc -lwiki.g -lm
+mv $exe ../bin/$exe
