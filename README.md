@@ -1,1 +1,1 @@
-# acep_com
+Code used to implement the model and the simulations, and carry out the analysis described in the article "When agreement-accepting free-riders are a necessary evil for the evolution of cooperation" (Martinez-Vaquero et al, Sci. Rep. 7, 2478 (2017)).
